@@ -23,11 +23,11 @@ work/                       Ignored builds, exports and local evidence
 ## Build and edit
 
 Follow [the authoring guide](docs/authoring.md) for setup, scoped builds and
-package creation. Run from this repository with the sibling quest builder compiled:
+package creation. Run from this repository with the quest builder on PATH:
 
 ```powershell
-../quest-builder/target/release/ghostline-quest-builder.exe series . --out work/builds --game 'path/to/Cyberpunk 2077'
-../quest-builder/target/release/ghostline-quest-builder.exe package packaging/story.json --out work/packages/story --plan
+ghostline-quest-builder series . --out work/builds --game 'path/to/Cyberpunk 2077'
+ghostline-quest-builder package packaging/story.json --out work/packages/story --plan
 ```
 
 The series command compiles ready quests and reports plans separately. It refuses an existing destination. Quest phases, journals, scenes, worlds and localization are generated from their authoring inputs. Character and building resources come from their owning standalone builders. No per-quest generator scripts or copied CR2W templates are build inputs.
