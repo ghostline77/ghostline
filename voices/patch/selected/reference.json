@@ -1,0 +1,28 @@
+{
+  "schema": "ghostline-voice-reference-v1",
+  "fingerprint": "809d11f9722e0c571e329fa23ef89213332b87e6fbee18d4d8a6358dbda723ce",
+  "speaker": "patch",
+  "variant": "selected",
+  "mode": "full_reference",
+  "reference_text": "You made it. Good. Keep your voice down.",
+  "instruction": "",
+  "tensors": "reference.safetensors",
+  "audio": "reference.wav",
+  "frame_count": 41,
+  "code_groups": 16,
+  "sha256": {
+    "reference.safetensors": "26de0d4c4ea0555ac4a8242ecd5228dbf2452d7780787a1ad3df274542e0c1b2",
+    "reference.wav": "3a8957709f8613254eea50c6ab3cc4987e2f6b2f29eb036680e7fdc89804eb38"
+  },
+  "source_sha256": {
+    "embedding": "9ac3ba3ab351930412972e8007180dd479fa5ea9d2d87bcc16bbfbb2e42784ee",
+    "codes": "183457b5a4b81913f231e64ccf478526b0ae708b8993ee642d62ca4137a772ce",
+    "audio": "3a8957709f8613254eea50c6ab3cc4987e2f6b2f29eb036680e7fdc89804eb38"
+  },
+  "selection": {
+    "source": "reviewed_dialogue",
+    "line": "gq001_01_patch_intro_01",
+    "reference_audio_sha256": "3a8957709f8613254eea50c6ab3cc4987e2f6b2f29eb036680e7fdc89804eb38",
+    "original_embedding_sha256": "8b8d1f0635c18e6e70b4878f3a6fb727491dfba0d262f8be8caa1fd2015e52db"
+  }
+}

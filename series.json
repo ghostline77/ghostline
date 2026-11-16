@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "characters": {
+    "patch": "characters/patch.character.json",
+    "iris": "characters/iris.character.json",
+    "cinder": "characters/cinder.character.json"
+  },
+  "quests": [
+    {
+      "id": "gq001",
+      "manifest": "quests/gq001/quest.json"
+    },
+    {
+      "id": "gq002",
+      "manifest": "quests/gq002/quest.json"
+    },
+    {
+      "id": "gq003",
+      "manifest": "quests/gq003/quest.json"
+    }
+  ]
+}

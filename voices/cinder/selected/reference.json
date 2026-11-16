@@ -1,0 +1,29 @@
+{
+  "schema": "ghostline-voice-reference-v1",
+  "fingerprint": "60b600e2bf9d2ef38167e1edf1cbbe593124e1ee54f7830d92a6e1bca8353bcc",
+  "speaker": "cinder",
+  "variant": "selected",
+  "mode": "full_reference",
+  "reference_text": "Patch says you can remove a machine without turning the whole block into a fireworks display.",
+  "instruction": "",
+  "tensors": "reference.safetensors",
+  "audio": "reference.wav",
+  "frame_count": 50,
+  "code_groups": 16,
+  "sha256": {
+    "reference.safetensors": "f81e3141b3d16a4577849783f35089dc558178fe3eead07d799fe3a0587ca044",
+    "reference.wav": "bf9e19d0a3ff25c49db32ef374986d8fc32d259ebb2dfabca03285e58c8730fd"
+  },
+  "source_sha256": {
+    "embedding": "4562b68628e829611410a6b51ddafad493d71614d6a958d12e9ddb4df8723bb9",
+    "codes": "e7097150d3097b20bd5a08870376c86b44f2a3b501fb83d1664d6a5b745ee669",
+    "audio": "bf9e19d0a3ff25c49db32ef374986d8fc32d259ebb2dfabca03285e58c8730fd"
+  },
+  "selection": {
+    "source": "reviewed_dialogue",
+    "line": "gq002_01_cinder_intro_01",
+    "voice_design": "cinder-a-grounded-medic",
+    "take": 3,
+    "reference_audio_sha256": "bf9e19d0a3ff25c49db32ef374986d8fc32d259ebb2dfabca03285e58c8730fd"
+  }
+}

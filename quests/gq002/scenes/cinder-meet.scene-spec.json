@@ -1,0 +1,250 @@
+{
+  "name": "gq002_cinder_meet",
+  "manifest": "../script/gq002_01_manifest.json",
+  "archive_path": "mod\\gq002\\scenes\\gq002_cinder_meet.scene",
+  "exported_datetime": "2026-07-23T00:00:00Z",
+  "choice_locales": [
+    "db_db",
+    "pl_pl",
+    "en_us"
+  ],
+  "section_tail_padding_ms": 400,
+  "line_gap_ms": 250,
+  "lipsync_animset": "mod\\gq002\\localization\\en-us\\lipsync\\cinder-meet.anims",
+  "actors": [
+    {
+      "key": "cinder",
+      "name": "cinder",
+      "kind": "community",
+      "entry": "cinder",
+      "community_ref": "#gq002_01_com_cinder",
+      "appearance": "default",
+      "lipsync": true,
+      "voicetag": "4805841566478315727"
+    },
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "record": "Character.Player_Puppet_Base",
+      "appearance": "default",
+      "lipsync": true
+    }
+  ],
+  "spoken_line_order": [
+    "gq002_01_cinder_intro_01",
+    "gq002_01_v_choice_common_ground_line",
+    "gq002_01_cinder_rsp_common_ground_01",
+    "gq002_01_v_choice_hate_tech_line",
+    "gq002_01_cinder_rsp_hate_tech_01",
+    "gq002_01_v_choice_job_line",
+    "gq002_01_cinder_rsp_job_01",
+    "gq002_01_v_choice_why_me_line",
+    "gq002_01_cinder_rsp_why_me_01",
+    "gq002_01_v_choice_accept_line",
+    "gq002_01_cinder_rsp_accept_01"
+  ],
+  "choice_line_order": [
+    "gq002_01_v_choice_common_ground_short",
+    "gq002_01_v_choice_hate_tech_short",
+    "gq002_01_v_choice_job_short",
+    "gq002_01_v_choice_why_me_short",
+    "gq002_01_v_choice_accept_short"
+  ],
+  "entry_point": {
+    "name": "start",
+    "node": "entry_start"
+  },
+  "exit_points": [
+    {
+      "name": "end",
+      "node": "exit_end"
+    },
+    {
+      "name": "job_accept",
+      "node": "exit_job_accept"
+    }
+  ],
+  "start_node": {
+    "on_start": [
+      {
+        "node": "puppet_ai"
+      },
+      {
+        "node": "pause_condition"
+      }
+    ],
+    "key": "entry_start"
+  },
+  "sections": [
+    {
+      "key": "opening_line",
+      "lines": [
+        "gq002_01_cinder_intro_01"
+      ],
+      "on_end": [
+        {
+          "node": "pause_condition_3"
+        }
+      ]
+    },
+    {
+      "key": "optional_branch_common_ground",
+      "lines": [
+        "gq002_01_v_choice_common_ground_line",
+        "gq002_01_cinder_rsp_common_ground_01"
+      ],
+      "on_end": [
+        {
+          "node": "choice_group_intro"
+        }
+      ]
+    },
+    {
+      "key": "optional_branch_hate_tech",
+      "lines": [
+        "gq002_01_v_choice_hate_tech_line",
+        "gq002_01_cinder_rsp_hate_tech_01"
+      ],
+      "on_end": [
+        {
+          "node": "choice_group_intro"
+        }
+      ]
+    },
+    {
+      "key": "main_progression_job",
+      "lines": [
+        "gq002_01_v_choice_job_line",
+        "gq002_01_cinder_rsp_job_01"
+      ],
+      "on_end": [
+        {
+          "node": "choice_group_after_job"
+        }
+      ]
+    },
+    {
+      "key": "optional_followup_why_me",
+      "lines": [
+        "gq002_01_v_choice_why_me_line",
+        "gq002_01_cinder_rsp_why_me_01"
+      ],
+      "on_end": [
+        {
+          "node": "choice_group_after_job"
+        }
+      ]
+    },
+    {
+      "key": "main_close_accept",
+      "lines": [
+        "gq002_01_v_choice_accept_line",
+        "gq002_01_cinder_rsp_accept_01"
+      ],
+      "on_end": [
+        {
+          "node": "exit_job_accept"
+        }
+      ]
+    }
+  ],
+  "choices": [
+    {
+      "key": "choice_group_intro",
+      "options": [
+        {
+          "choice_key": "gq002_01_v_choice_common_ground_short",
+          "caption": "Who are Common Ground?",
+          "single_choice": false,
+          "choice_type": 0,
+          "target": "optional_branch_common_ground"
+        },
+        {
+          "choice_key": "gq002_01_v_choice_hate_tech_short",
+          "caption": "You hate tech?",
+          "single_choice": false,
+          "choice_type": 0,
+          "target": "optional_branch_hate_tech"
+        },
+        {
+          "choice_key": "gq002_01_v_choice_job_short",
+          "caption": "What needs removing?",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "main_progression_job"
+        }
+      ],
+      "actor": "cinder"
+    },
+    {
+      "key": "choice_group_after_job",
+      "options": [
+        {
+          "choice_key": "gq002_01_v_choice_why_me_short",
+          "caption": "Why me?",
+          "single_choice": false,
+          "choice_type": 0,
+          "target": "optional_followup_why_me"
+        },
+        {
+          "choice_key": "gq002_01_v_choice_accept_short",
+          "caption": "I'll check it.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "main_close_accept"
+        }
+      ],
+      "actor": "cinder"
+    }
+  ],
+  "quest_nodes": [
+    {
+      "kind": "puppet_ai",
+      "entity_ref": "#gq002_01_com_cinder",
+      "entry": "cinder",
+      "ai_tier": "Cinematic",
+      "key": "puppet_ai"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#gq002_01_tr_mood",
+      "require_player_not_in_combat": true,
+      "on_out": [
+        {
+          "node": "pause_condition_2"
+        }
+      ],
+      "key": "pause_condition"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#gq002_01_tr_awareness",
+      "on_out": [
+        {
+          "node": "opening_line"
+        }
+      ],
+      "key": "pause_condition_2"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#gq002_01_tr_engage",
+      "on_out": [
+        {
+          "node": "choice_group_intro"
+        }
+      ],
+      "key": "pause_condition_3"
+    }
+  ],
+  "xor_nodes": [],
+  "end_nodes": [
+    {
+      "key": "exit_end"
+    },
+    {
+      "key": "exit_job_accept"
+    }
+  ]
+}

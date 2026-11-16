@@ -1,0 +1,6 @@
+{
+  "name":"Ghostline_Story",
+  "builds":["../work/builds/gq001","../work/builds/gq002"],
+  "active_roots":["mod\\gq001\\phases\\gq001.questphase","mod\\gq002\\phases\\gq002.questphase"],
+  "include_loose":["r6/tweaks/ghostline/items.yaml","r6/tweaks/ghostline/faction_ghostline.yaml"]
+}

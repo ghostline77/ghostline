@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "ghostline",
+  "depot_prefixes": [
+    "mod/gq001/",
+    "mod/gq002/",
+    "mod/gq003/",
+    "mod/ghostline/characters/patch/",
+    "mod/ghostline/characters/iris/",
+    "mod/ghostline/characters/cinder/",
+    "mod/ghostline/characters/mara/"
+  ],
+  "dependencies": []
+}

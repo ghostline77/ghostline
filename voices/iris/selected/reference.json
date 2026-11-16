@@ -1,0 +1,28 @@
+{
+  "schema": "ghostline-voice-reference-v1",
+  "fingerprint": "7dd34bef0b6093fe47a20028762b4a8caa243aa4d5c04492f77943086203d56e",
+  "speaker": "iris",
+  "variant": "selected",
+  "mode": "full_reference",
+  "reference_text": "You have the cache. Good. Keep it isolated—I don't know what it tries to shake hands with yet.",
+  "instruction": "",
+  "tensors": "reference.safetensors",
+  "audio": "reference.wav",
+  "frame_count": 85,
+  "code_groups": 16,
+  "sha256": {
+    "reference.safetensors": "e53aebc5154186abbf331476eca04b491736ddf5aad1fbed8d32eabdd59bc55b",
+    "reference.wav": "c8787ecc934cc6b1fca0d69a3aec7f93271a4d323a38ed5c94bcfd4d3f054210"
+  },
+  "source_sha256": {
+    "embedding": "6b4e546195c40408ed29cf33d7c94a820f43bccac415bd92058130004f2efd08",
+    "codes": "36d40e48689092aaaf0167621e52f822de09664946720cbfa0aa7b2b1dccc7e8",
+    "audio": "c8787ecc934cc6b1fca0d69a3aec7f93271a4d323a38ed5c94bcfd4d3f054210"
+  },
+  "selection": {
+    "source": "designed_reference",
+    "status": "generated_unreviewed",
+    "reference_audio_sha256": "c8787ecc934cc6b1fca0d69a3aec7f93271a4d323a38ed5c94bcfd4d3f054210",
+    "original_embedding_sha256": "6b4e546195c40408ed29cf33d7c94a820f43bccac415bd92058130004f2efd08"
+  }
+}
